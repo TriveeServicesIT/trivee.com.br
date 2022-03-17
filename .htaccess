@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^trivee.com.br$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.trivee.com.br/$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
+
